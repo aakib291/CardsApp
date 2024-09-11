@@ -1,0 +1,19 @@
+/* Ensure these styles are applied */
+.card-container {
+  position: relative;
+}
+
+.card-image {
+  position: relative;
+  z-index: 10; /* Ensures the image stays above the blur overlay */
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit; /* Ensure the overlay matches the card's border-radius */
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Apply blur effect to background only */
+  z-index: 1; /* Place it behind the content but on top of the background */
+  pointer-events: none; /* Allow clicks to pass through */
+}
